@@ -16,7 +16,7 @@ window.onload = function() {
 
     var addHexagonRow = function (item, count) {        
         var newRow = hexaRow.cloneNode(true);
-        var hexElement = newRow.getElementById('element').content;
+        var hexElement = document.getElementById('element').content;
         var addHexagon = function () {
             var newHex = hexElement.cloneNode(true);            
             newRow.appendChild(newHex);
@@ -32,25 +32,6 @@ window.onload = function() {
     
 
     for (var i=1; i<10; i++) {
-
-    addHexagonRow('elements-row',i);
-    
-
+        addHexagonRow('elements-row',i);
     }
-    
-
-    var addRow = function () {
-        var newRow = hexaRow.cloneNode(true);
-        // for(var i=0; i<23; i++) {
-        //     addHexagon();
-        // }
-        heroArea.appendChild(newRow);
-                     
-    }
-
-    // addHexagon();
-    // addRow();
-
-
-
 }
