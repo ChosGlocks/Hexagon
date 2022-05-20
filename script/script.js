@@ -2,26 +2,55 @@
 window.onload = function() {
     var heroArea = document.querySelector('.hero');    
     var hexaRow = document.getElementById('hexarow').content;
-    var hexElement = hexaRow.getElementById('element').content;
-    var newRow = hexaRow.cloneNode(true);
-    //var addedRows = heroArea.children;
-    //var addedHexagons = newRow.children;
-    var test = document.createElement('p');
-    test.textContent = 'test';
-
-    var addRow = function() {
-        heroArea.appendChild(newRow);             
-    }
-
-    var addHexagon = function () {
-        var newHex = hexElement.cloneNode(true);
-        newRow.appendChild(newHex);       
-    }
-      
-    addHexagon();
-    addHexagon();    
-    addHexagon();        
     
+    // heroArea.appendChild(newRow);
+    
+    
+    // //var addedRows = heroArea.children;
+    // //var addedHexagons = newRow.children;
+    // var newRow = hexaRow.cloneNode(true);
+    // var test = document.createElement('p');
+    // test.textContent = 'test';
+    
+    
+
+    var addHexagonRow = function (item, count) {        
+        var newRow = hexaRow.cloneNode(true);
+        var hexElement = newRow.getElementById('element').content;
+        var addHexagon = function () {
+            var newHex = hexElement.cloneNode(true);            
+            newRow.appendChild(newHex);
+        }
+        for (var i = 0; i < 21; i++) {
+            addHexagon();
+        }
+        var hexaRowDiv = newRow.querySelector('.hexarow');
+        hexaRowDiv.classList.add(item+count);        
+        heroArea.appendChild(newRow);
+        
+    }
+    
+
+    for (var i=1; i<10; i++) {
+
+    addHexagonRow('elements-row',i);
+    
+
+    }
+    
+
+    var addRow = function () {
+        var newRow = hexaRow.cloneNode(true);
+        // for(var i=0; i<23; i++) {
+        //     addHexagon();
+        // }
+        heroArea.appendChild(newRow);
+                     
+    }
+
+    // addHexagon();
+    // addRow();
+
 
 
 }

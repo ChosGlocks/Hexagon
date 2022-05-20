@@ -10,7 +10,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
     </style>
-    <script src="scripts/script.js"></script>
+    <script src="script/script.js"></script>
 </head>
 
 <body>
@@ -35,20 +35,24 @@
     </header>
 
     <div class="hero">
-        <template class="hexarow elements-row1">
-            <template class="element element1-1">
-                <div class="center">
-                    <div class="top-left">
-                        <div class="top-right"></div>
-                    </div>
-                    <div class="bottom-left">
-                        <div class="side-down-left"></div>
-                        <div class="bottom-right">
-                            <div class="side-down-right"></div>
+        <template class="hexarow elements-row1" id="hexarow">
+            <div class="hexarow"></div>
+                <template class="element" id="element">
+                    <div class="element">
+                        <div class="center">
+                            <div class="top-left">
+                                <div class="top-right"></div>
+                            </div>
+                            <div class="bottom-left">
+                                <div class="side-down-left"></div>
+                                <div class="bottom-right">
+                                    <div class="side-down-right"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </template>            
+                </template> 
+            </div>           
         </template>
     </div>
 
